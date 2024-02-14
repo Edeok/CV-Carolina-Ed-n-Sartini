@@ -13,7 +13,6 @@
       line-height: 1.6;
       margin: 0;
       padding: 0;
-      text-align: justify;
     }
     .container {
       max-width: 800px;
@@ -90,34 +89,37 @@
     }
 
     @media only screen and (max-width: 600px) {
-  .container {
-    width: 90%; /* Cambiar el ancho del contenedor en pantallas pequeñas */
-    margin: 30px auto; /* Ajustar el margen */
-  }
-  h1 {
-    font-size: 24px; /* Cambiar el tamaño del título */
-  }
-  h2 {
-    font-size: 20px; /* Cambiar el tamaño del subtítulo */
-  }
-  ul {
-    padding-left: 10px !important; /* Ajustar el padding de la lista */
-  }
-  li {
-    margin-bottom: 5px !important; /* Ajustar el margen entre elementos de lista */
-  }
-  .download-button {
-    padding: 10px 20px; /* Ajustar el padding del botón */
-    font-size: 14px; /* Cambiar el tamaño del texto del botón */
-  }
-  /* Estilos para los enlaces dentro de la lista */
-ul li a {
-  text-align: left; /* Anula el justificado */
-  max-width: 90%; /* Establece un ancho máximo para el enlace */
-}
+      .container {
+        width: 90%; /* Cambiar el ancho del contenedor en pantallas pequeñas */
+        margin: 30px auto; /* Ajustar el margen */
+      }
+      h1 {
+        font-size: 24px; /* Cambiar el tamaño del título */
+      }
+      h2 {
+        font-size: 20px; /* Cambiar el tamaño del subtítulo */
+      }
+      ul {
+        padding-left: 10px !important; /* Ajustar el padding de la lista */
+      }
+      li {
+        margin-bottom: 5px !important; /* Ajustar el margen entre elementos de lista */
+      }
+      .download-button {
+        padding: 10px 20px; /* Ajustar el padding del botón */
+        font-size: 14px; /* Cambiar el tamaño del texto del botón */
+      }
+      /* Estilos para los enlaces dentro de la lista */
+      ul li a {
+        text-align: left; /* Anula el justificado */
+        max-width: 90%; /* Establece un ancho máximo para el enlace */
+      }
+    }
 
-}
-
+    /* Estilo para justificar solo las secciones específicas */
+    .justified-sections {
+      text-align: justify;
+    }
   </style>
   
 </head>
@@ -128,26 +130,27 @@ ul li a {
       <p style="font-style: italic;">Blockchain Developer | Full Stack Developer | Coach Ontológico Empresarial</p>
     </div>
 
-    <div class="section">
-      <div class="section-header">
-        <h2>Información Personal</h2>
+    <div class="justified-sections"> <!-- Contenedor para las secciones justificadas -->
+      <div class="section">
+        <div class="section-header">
+          <h2>Información Personal</h2>
+        </div>
+        <ul>
+          <li><a href="mailto:carosartini.cs@gmail.com">Correo Electrónico: carosartini.cs@gmail.com</a></li>
+          <li>Ubicación: Sunchales, Provincia de Santa Fe, Argentina</li>
+          <li>LinkedIn: <a href="https://linkedin.com/in/carolina-edén-sartini-034b52241">linkedin/Carolina Edén Sartini</a></li>
+          <li>GitHub: <a href="https://github.com/Edeok">github.com/Edeok</a></li>
+          <li>Portfolio: <a href="https://edeok.github.io/Edeok.github.io-Portfolio/">Portfolio/Carolina Edén Sartini</a></li>
+          <li>Teléfono: +54 3493400177</li>
+        </ul>
       </div>
-      <ul>
-        <li><a href="mailto:carosartini.cs@gmail.com">Correo Electrónico: carosartini.cs@gmail.com</a></li>
-        <li>Ubicación: Sunchales, Provincia de Santa Fe, Argentina</li>
-        <li>LinkedIn: <a href="https://linkedin.com/in/carolina-edén-sartini-034b52241">linkedin/Carolina Edén Sartini</a></li>
-        <li>GitHub: <a href="https://github.com/Edeok">github.com/Edeok</a></li>
-        <li>Portfolio: <a href="https://edeok.github.io/Edeok.github.io-Portfolio/">Portfolio/Carolina Edén Sartini</a></li>
-        <li>Teléfono: +54 3493400177</li>
-      </ul>
-    </div>
-    
-    <div class="section">
-      <div class="section-header">
-        <h2>Sobre Mí</h2>
+      
+      <div class="section">
+        <div class="section-header">
+          <h2>Sobre Mí</h2>
+        </div>
+        <p>Soy una apasionada desarrolladora Full Stack con experiencia destacada en tecnologías Blockchain. Mi enfoque se centra en crear soluciones innovadoras y funcionales que impulsen el éxito en proyectos de desarrollo tecnológico.</p>
       </div>
-      <p>Soy una apasionada desarrolladora Full Stack con experiencia destacada en tecnologías Blockchain. Mi enfoque se centra en crear soluciones innovadoras y funcionales que impulsen el éxito en proyectos de desarrollo tecnológico.</p>
-    </div>
     <h2>Educación</h2>
     <ul>
       <li>Chainlink Bootcamp - Desarrollo Blockchain (ene 2024)</li>
