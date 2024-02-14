@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV de Carolina Edén Sartini</title>
   <style>
+    /* Estilos generales */
     body {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       background-color: #ffe6e6; /* Color de fondo femenino */
@@ -86,6 +87,27 @@
      /* Evitar que la sección de habilidades técnicas se divida entre páginas */
      .skills-section {
       page-break-inside: avoid;
+    }
+
+    /* Estilos responsivos */
+    @media only screen and (max-width: 600px) {
+      .container {
+        width: 90%; /* Cambiar el ancho del contenedor en pantallas pequeñas */
+        margin: 30px auto; /* Ajustar el margen */
+      }
+      h1 {
+        font-size: 24px; /* Cambiar el tamaño del título */
+      }
+      h2 {
+        font-size: 20px; /* Cambiar el tamaño del subtítulo */
+      }
+      ul {
+        padding-left: 10px; /* Ajustar el padding de la lista */
+      }
+      .download-button {
+        padding: 10px 20px; /* Ajustar el padding del botón */
+        font-size: 14px; /* Cambiar el tamaño del texto del botón */
+      }
     }
   </style>
   
