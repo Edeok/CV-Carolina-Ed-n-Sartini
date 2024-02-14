@@ -57,25 +57,33 @@
       margin-bottom: 10px;
     }
     a {
-      color: #a872f3;
+      color: #fa8b8b;
       text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
     }
-    @media screen and (max-width: 600px) {
-      .container {
-        padding: 10px;
-        border-radius: 0;
-      }
-      h1 {
-        font-size: 24px;
-      }
-      h2 {
-        font-size: 20px;
-      }
+    /* Estilos para el botón */
+    .download-button {
+      background-color: #f77c7c; /* Color de fondo */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 12px;
+    }
+
+    /* Cambiar color al pasar el cursor */
+    .download-button:hover {
+      background-color: #f66767; /* Nuevo color de fondo al pasar el cursor */
     }
   </style>
+  
 </head>
 <body>
   <div class="container">
@@ -151,6 +159,37 @@
         <li><a href="https://drive.google.com/file/d/1E4-7QLnwp5l-Y2FI_iE56mVc-WWCJn7k/view">Coaching Creatividad: El despertar creativo</a></li>
         <li><a href="https://drive.google.com/file/d/1vQQBPq_zZjB-x7aCRMDnlFk1B96BJ3xv/view">Coaching Liderazgo</a></li>
       </ul>
-  </div>
-</body>
+
+    <!-- Botón para descargar el PDF -->
+  <button onclick="generatePDF()" class="download-button" id="downloadButton">Descargar PDF</button>
+
+  <!-- Script para cargar la biblioteca html2pdf -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+  <!-- Tu script para generar el PDF -->
+  <script>
+    function generatePDF() {
+      // Oculta el botón antes de convertir la página en PDF
+      document.getElementById('downloadButton').style.display = 'none';
+
+      const element = document.body; // Selecciona el cuerpo del documento
+      const options = {
+        margin: 0.5, // Margen en pulgadas
+        filename: 'CV_Carolina_Eden_Sartini.pdf', // Nombre del archivo PDF
+        image: { type: 'jpeg', quality: 0.98 }, // Opciones de imagen
+        html2canvas: { scale: 2 }, // Escala para mejorar la calidad de la imagen
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' } // Configuración de jsPDF
+      };
+      
+      // Convierte la página HTML en PDF
+      html2pdf().set(options).from(element).save();
+      
+      // Vuelve a mostrar el botón después de un pequeño retraso (500ms) después de convertir la página en PDF
+      setTimeout(function() {
+        document.getElementById('downloadButton').style.display = 'block';
+      }, 500);
+    
+    }
+  </script>
+ </body>
 </html>
