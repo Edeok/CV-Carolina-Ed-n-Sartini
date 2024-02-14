@@ -13,6 +13,7 @@
       line-height: 1.6;
       margin: 0;
       padding: 0;
+      text-align: justify;
     }
     .container {
       max-width: 800px;
@@ -53,9 +54,11 @@
     }
     ul {
       padding-left: 20px;
+      text-align: justify; /* Justifica el texto dentro de las listas */
     }
     li {
       margin-bottom: 10px;
+      text-align: left; /* Anula la justificación en los elementos li */
     }
     a {
       color: #fa8b8b;
@@ -100,11 +103,14 @@
         font-size: 20px; /* Cambiar el tamaño del subtítulo */
       }
       ul {
-        padding-left: 10px !important; /* Ajustar el padding de la lista */
-      }
-      li {
-        margin-bottom: 5px !important; /* Ajustar el margen entre elementos de lista */
-      }
+    padding-left: 25px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  li {
+    margin-bottom: 5px !important;
+  }
       .download-button {
         padding: 10px 20px; /* Ajustar el padding del botón */
         font-size: 14px; /* Cambiar el tamaño del texto del botón */
@@ -116,10 +122,7 @@
       }
     }
 
-    /* Estilo para justificar solo las secciones específicas */
-    .justified-sections {
-      text-align: justify;
-    }
+    
   </style>
   
 </head>
